@@ -34,7 +34,19 @@ function App() {
     },
   ];
 
-  return <>{/* write code to display all the books using */}</>;
+  return <>{
+    books.map((book) => {
+      return (
+        <div className='book-card' key={book.id}>
+          <img src={book.image} alt='book' />
+          <h3>{book.name}</h3>
+          <p>{book.genre}</p>
+          <p>{book.author}</p>
+        </div>
+      );
+    })
+  }
+  </>
 }
 
 export default App;
